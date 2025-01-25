@@ -11,6 +11,7 @@
 |
 */
 
+// Laravel動作確認
 Route::get('/', function () {
     return view('welcome');
 });
