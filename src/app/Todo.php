@@ -4,9 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Todo extends Model
+class Todo extends Model // ModelでSQL文を書かずに、todosテーブルを操作できる。
 {
-    // Modelを介することでSQL文を組み立てることなくtodosテーブルを操作することができるようになる。
     protected $table = 'todos';
 
     protected $fillable = [
@@ -14,7 +13,9 @@ class Todo extends Model
     ];
 }
 
-/* php artisan make:model Todo コマンドを実行するとファイルの中に下記のコードが入っている。
+
+
+/* php artisan make:model Todo コマンドを実行すると元から下記のコードが入っている。
 <?php
 
 namespace App;

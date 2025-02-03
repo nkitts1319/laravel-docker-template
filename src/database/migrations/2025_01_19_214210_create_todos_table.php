@@ -15,7 +15,7 @@ class CreateTodosTable extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('content'); // S4 追加
+            $table->string('content'); // S4 雛形にcontentカラムを追加
             $table->timestamps();
         });
     }

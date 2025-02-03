@@ -11,14 +11,12 @@
 |
 */
 
-// Laravel動作確認
+// Laravel動作確認用
 Route::get('/', function () {
     return view('welcome');
 });
 
-// 編集
-Route::get('/todo', 'TodoController@index')->name('todo.index'); // ルート名の定義を追記
-Route::get('/todo/create', 'TodoController@create')->name('todo.create'); // 追記; // S11 追記
+Route::get('/todo', 'TodoController@index')->name('todo.index');
+Route::get('/todo/create', 'TodoController@create')->name('todo.create');
 
-// S13
 Route::post('/todo', 'TodoController@store')->name('todo.store');
